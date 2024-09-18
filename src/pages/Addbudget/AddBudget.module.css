@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.form {
+    width: 30%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .form input {
+    padding: 20px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form .amount {
+    color: hsl(125, 80%, 44%);
+
+}
+
+ .form button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+ }

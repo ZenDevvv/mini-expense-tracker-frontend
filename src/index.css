@@ -1,0 +1,31 @@
+:root {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: var(--color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-bg: #D0B8A8;
+  --color-primary: #8D493A;
+  --color-other: #DFD3C3;
+  --color-secondary: #F8EDE3;
+  --color-primary-highlight: #834132;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-width: 320px;
+  height: 100vh;
+}

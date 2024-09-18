@@ -1,0 +1,32 @@
+.buttons {
+    width: 50%;
+    min-width: 500px;
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 15px 20px;
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 12px;
+    /* transform: translatey(-10px); */
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin-top: 10px;
+}
+
+.buttons .addBtn {
+    flex: 3;
+}
+
+.buttons .resetBtn {
+    flex: 1;
+}
+
+.buttons button:hover {
+    border-radius: 25px;
+    background-color: var(--color-primary-highlight);
+}

@@ -1,0 +1,23 @@
+
+
+ .link {
+    text-align: left;
+    background-color: transparent;
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-weight: 900;
+    transition: background-color, flex 0.15s ease;
+    outline: 2px solid var(--color-primary);
+    font-size: 18px;
+    transition: all 0.15s ease-in-out;
+}
+
+.link:hover {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}

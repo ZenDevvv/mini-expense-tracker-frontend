@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .title {
+    text-align: center;
+    width: 100vw;
+    text-align: center;
+    width: 50%;
+    display: inline;
+    line-height: normal;
+    min-width: 500px;
+    margin-bottom: 50px;
+  }
+  
+  .categoriesContainer {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    min-width: 500px;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+.categoriesContainer .all {
+  display: inline;
+  background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+
+    text-align: left;
+    text-decoration: none;
+    padding: 2px 15px;
+    border-radius: 25px;
+    font-weight: 900;
+    outline: 2px solid var(--color-primary);
+    font-size: 18px;
+}

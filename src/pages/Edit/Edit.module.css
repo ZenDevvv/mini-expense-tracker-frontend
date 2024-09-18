@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.form {
+    width: 30%;
+    min-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .form .expenses {
+   color: hsl(0, 100%, 39%);
+ }
+
+ .form .budget {
+   color: hsl(120, 100%, 39%);
+
+ }
+
+ .form input {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 700;
+ }
+
+ .form button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+ }

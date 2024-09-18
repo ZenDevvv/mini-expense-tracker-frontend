@@ -1,0 +1,87 @@
+.historyContainer {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    min-width: 500px;
+    max-height: 374px;
+
+}
+
+.historyContainer .historyList {
+    list-style: none;
+    overflow: scroll;
+    overflow-x: hidden;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.historyContainer .historyList::-webkit-scrollbar {
+    width: 0px; 
+}
+
+.historyContainer .historyList .historyRow {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-secondary);
+    padding: 15px 20px;
+    border-radius: 12px;
+    /* margin-bottom: 10px; */
+    position: relative;
+}
+
+.historyContainer .historyList .historyRow .name {
+    font-weight: 600;
+    margin-right: 10px;
+    
+}
+
+
+.historyContainer .historyList .historyRow .amountBudget {
+    font-weight: 900;
+    color: hsl(120, 100%, 39%);
+    transition: all 0.3s ease-in-out;
+}
+
+.historyContainer .historyList .historyRow:hover .amountBudget,
+.historyContainer .historyList .historyRow:hover .amountExpenses {
+    transform: translateX(-20px);
+}
+
+.historyContainer .historyList .historyRow .amountExpenses {
+    font-weight: 900;
+    color: hsl(0, 100%, 39%);
+    transition: all 0.15s ease-in-out;
+}
+
+.historyContainer .historyList .historyRow .editIcon {
+    margin-left: 10px;
+    cursor: pointer;
+    color: hsl(120, 100%, 19%);
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.historyContainer .historyList .historyRow:hover .editIcon {
+    transform: scale(1);
+
+}
+
+.historyContainer .historyList .historyRow .deleteIcon {
+    /* display: none; */
+    color: hsl(0, 100%, 30%);
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.historyContainer .historyList .historyRow:hover .deleteIcon{
+    /* display: inline; */
+    top: 50%;
+    transform: translate(-10px, -50%);
+}
