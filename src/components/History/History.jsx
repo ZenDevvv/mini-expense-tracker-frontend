@@ -4,16 +4,20 @@ import axios from "axios";
 import Dashboard from "../Dashboard/Dashboard";
 import { useNavigate } from "react-router-dom";
 
+const URL_API = import.meta.env.VITE_URL_API;
+
+
 const History = () => {
   const [history, setHistory] = useState([]);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get("https://mini-expense-tracker-backend.onrender.com/");
+        const res = await axios.get(`${URL_API}/`);
         setHistory(res.data);
-        console.log(res.data);
+        console.log(res.data)
       } catch (err) {
         console.log(err);
       }
@@ -28,9 +32,9 @@ const History = () => {
 
   const handleDelete = async (source, id) => {
     try {
-      const res = await axios.delete(`https://mini-expense-tracker-backend.onrender.com/${source}/${id}`);
+      const res = await axios.delete(`${URL_API}/${source}/${id}`);
       console.log(res.data);
-      window.location.reload();
+      setHistory((prevHistory) => prevHistory.filter((hist) => hist.id !== id));
     } catch (err) {
       console.log(err);
     }

@@ -4,6 +4,9 @@ import axios from "axios";
 import Dashboard from "../Dashboard/Dashboard";
 import { useNavigate } from "react-router-dom";
 
+const URL_API = import.meta.env.VITE_URL_API;
+
+
 const BudgetList = () => {
   const [budgetList, setBudgetList] = useState([]);
   const navigate = useNavigate();
@@ -11,7 +14,7 @@ const BudgetList = () => {
   useEffect(() => {
     const fetchBudgetList = async () => {
       try {
-        const res = await axios.get("https://mini-expense-tracker-backend.onrender.com/budget");
+        const res = await axios.get(`${URL_API}/budget`);
         console.log(res.data);
         setBudgetList(res.data);
       } catch (err) {
@@ -24,7 +27,7 @@ const BudgetList = () => {
 
   const handleDelete = async (source, id) => {
     try {
-      const res = await axios.delete(`https://mini-expense-tracker-backend.onrender.com/${source}/${id}`);
+      const res = await axios.delete(`${URL_API}/${source}/${id}`);
       console.log(res.data);
       window.location.reload();
     } catch (err) {

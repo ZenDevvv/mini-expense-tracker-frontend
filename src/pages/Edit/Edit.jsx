@@ -3,6 +3,9 @@ import styles from "./Edit.module.css";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
+const URL_API = import.meta.env.VITE_URL_API;
+
+
 const Edit = () => {
   const navigate = useNavigate();
 
@@ -17,7 +20,7 @@ const Edit = () => {
     const fetchEntry = async () => {
       try {
         const res = await axios.get(
-          `https://mini-expense-tracker-backend.onrender.com/edit/${id}/?type=${source}`
+          `${URL_API}/edit/${id}/?type=${source}`
         );
         setInput(res.data[0])
       } catch (err) {
@@ -37,7 +40,7 @@ const Edit = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.put(`https://mini-expense-tracker-backend.onrender.com/edit/${id}/?type=${source}` , input);
+      const res = await axios.put(`${URL_API}/edit/${id}/?type=${source}` , input);
       console.log(res.data)
       navigate("/")
     }catch(err) {

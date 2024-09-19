@@ -3,6 +3,9 @@ import styles from "./AddBudget.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const URL_API = import.meta.env.VITE_URL_API;
+
+
 const Add = () => {
   const navigate = useNavigate();
 
@@ -19,7 +22,7 @@ const Add = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://mini-expense-tracker-backend.onrender.com/addBudget", input);
+      const res = await axios.post(`${URL_API}/addBudget`, input);
       console.log(res.data);
       navigate("/");
     } catch (err) {
