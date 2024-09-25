@@ -1,8 +1,7 @@
 .buttons {
-    width: 50%;
-    min-width: 500px;
     display: flex;
     gap: 10px;
+    width: 100%;
 }
 
 .buttons button {

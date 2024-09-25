@@ -24,7 +24,7 @@ const Expenses = () => {
   return (
     <div className={styles.totalExpenses}>
       <h3>Total Expenses</h3>
-      <h2>{`-P${Math.abs(totalExpenses)}`}</h2>
+      <h2>{totalExpenses === 0 ? 0 : `-P${Math.abs(totalExpenses)}`}</h2>
     </div>
   );
 };

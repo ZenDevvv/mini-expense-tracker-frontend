@@ -6,10 +6,8 @@ import App from "./App.jsx";
 import "./index.css";
 
 import Reset from "./pages/Reset/Reset.jsx";
-import Add from "./pages/Add/Add.jsx";
+import Add from "./pages/AddExpenses/Add.jsx";
 import AddBudget from "./pages/Addbudget/AddBudget.jsx";
-import ExpensesPage from "./pages/ExpensesPages/ExpensesPage.jsx";
-import BudgetPage from "./pages/BudgetPage/BudgetPage.jsx";
 import Edit from "./pages/Edit/Edit.jsx";
 
 const router = createBrowserRouter([
@@ -31,11 +29,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/ExpensesPage",
-    element: <ExpensesPage />,
+    element: <App />,
   },
   {
     path: "/BudgetPage",
-    element: <BudgetPage />,
+    element: <App />,
   },
   {
     path: "/edit/:id/:source",

@@ -2,20 +2,32 @@ import { useEffect, useState } from "react";
 import styles from "./App.module.css";
 import History from "./components/History/History";
 import Buttons from "./components/Buttons/Buttons";
-import CategoryBudget from "./components/Categories/CategoryBudget";
-import CategoryExpenses from "./components/Categories/CategoryExpenses";
+
+import Categories from "./components/Categories/Categories";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const [page, setPage] = useState("");
+  // const location = useLocation(); // Use useLocation hook to get the current path
+
+  useEffect(() => {
+    const path = location.pathname;
+
+    if(path === "/"){
+      setPage("all")
+    } else if(path === "/ExpensesPage"){
+      setPage("expenses")
+    } else if(path === "/BudgetPage"){
+      setPage("budget")
+    }
+
+  }, [location.pathname])
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>History</h1>
-      <div className={styles.categoriesContainer}>
-        <a className={styles.all} href="">All</a>
-        <CategoryExpenses />
-        <CategoryBudget />
-        
-      </div>
-      <History />
+      <h1 className={styles.title}>Expenses Tracker</h1>
+      <Categories page={page} />
+      <History page={page} />
       <Buttons />
     </div>
   );

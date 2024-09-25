@@ -21,3 +21,29 @@
     text-align: center;
     cursor: pointer;
 }
+
+.container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .all,.expenses,.budget {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 530px){
+    .container{
+      justify-content: center;
+    }
+
+    .link {
+      padding: 2px 15px;
+      font-size: 14px;
+    }
+  }
