@@ -19,6 +19,7 @@ const History = ({ page }) => {
           setHistory(res.data);
           setIsLoading(false);
         } catch (err) {
+          setIsLoading(true);
           console.log(err);
         }
       };
@@ -30,6 +31,7 @@ const History = ({ page }) => {
           setHistory(res.data);
           setIsLoading(false);
         } catch (err) {
+          setIsLoading(true);
           console.log(err);
         }
       };
@@ -43,6 +45,7 @@ const History = ({ page }) => {
           setIsLoading(false);
         } catch (err) {
           console.log(err);
+          setIsLoading(true);
         }
       };
 
@@ -104,7 +107,7 @@ const History = ({ page }) => {
           })
         )}
       </ul>
-      <Dashboard />
+      {/* <Dashboard /> */}
     </div>
   );
 };
